@@ -5,6 +5,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
     initialValues || {
       name: "",
       category: "",
+      discount: "",
       price: "",
       description: "",
       imageUrl: "",
@@ -39,6 +40,15 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         type="number"
         name="price"
         value={formData.price}
+        onChange={handleChange}
+        required
+      />
+
+      <label>Discount</label>
+      <input
+        type="number"
+        name="discount"
+        value={formData.discount}
         onChange={handleChange}
         required
       />

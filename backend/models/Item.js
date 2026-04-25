@@ -7,6 +7,13 @@ const itemSchema = new mongoose.Schema(
       required: [true, "Item name is required"],
       trim: true,
     },
+    discount : {
+      type: Number,
+      min : 0,
+      max : 100,
+      required: [true, "discount is required"],
+      trim: true,
+    },
     category: {
       type: String,
       required: [true, "Category is required"],
